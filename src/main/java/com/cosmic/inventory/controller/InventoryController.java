@@ -30,4 +30,9 @@ public class InventoryController {
             return ResponseEntity.status(500).build();
         }
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<java.util.List<Product>> getAllProducts() {
+        return ResponseEntity.ok(inventoryService.getAllProducts());
+    }
 }

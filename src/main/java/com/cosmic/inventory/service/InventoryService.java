@@ -40,4 +40,7 @@ public class InventoryService {
         
         return productRepository.save(product);
     }
+    public java.util.List<Product> getAllProducts() {
+    return productRepository.findAll();
+    }
 }
